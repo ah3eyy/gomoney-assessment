@@ -8,9 +8,6 @@ let token;
 let teamId;
 
 describe('run simle test', () => {
-    it('it should return tes', () => {
-        expect(true).toBe(true);
-    })
 
     it('create user account api', async () => {
         const res = await requestU.post('auth/create-user-account')
