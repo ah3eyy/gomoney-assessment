@@ -41,8 +41,8 @@ describe('run simle test', () => {
             .set('Authorization', `Bearer ${token}`)
         expect(testTeamList.statusCode).toEqual(200)
         expect(testTeamList.body).toHaveProperty('data')
-        expect(testTeamList.body.data.teams.length).toBeGreaterThanOrEqual(0)
-        teamId = testTeamList.body.data.teams[0]._id;
+        expect(testTeamList.body.data.teams.data.length).toBeGreaterThanOrEqual(0)
+        teamId = testTeamList.body.data.teams.data[0]._id;
     })
 
 
@@ -60,7 +60,6 @@ describe('run simle test', () => {
             .set('Authorization', `Bearer ${token}`)
         expect(res.statusCode).toEqual(200)
         expect(res.body).toHaveProperty('data')
-        expect(res.body.data.teams.length).toBeGreaterThanOrEqual(0)
     })
 
     it('Pending Features', async () => {
@@ -69,6 +68,5 @@ describe('run simle test', () => {
             .set('Authorization', `Bearer ${token}`)
         expect(res.statusCode).toEqual(200)
         expect(res.body).toHaveProperty('data')
-        expect(res.body.data.teams.length).toBeGreaterThanOrEqual(0)
     })
 })
