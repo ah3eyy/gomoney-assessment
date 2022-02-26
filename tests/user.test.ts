@@ -1,10 +1,12 @@
+import chai from "chai";
+import 'dotenv/config'
+import mocha from 'mocha';
 import request from "supertest";
-import jest from 'jest';
-import '@types/jest';
 
 const url = 'https://gomoneyassessment.herokuapp.com/api/';
-
 const requestU = request(url);
+const expect = chai.expect;
+const it = chai.it;
 let token;
 let teamId;
 
