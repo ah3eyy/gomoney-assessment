@@ -1,14 +1,15 @@
 import request from "supertest";
 import jest from 'jest';
+import '@types/jest';
 
-const url = 'http://localhost:3000/api/';
+const url = 'https://gomoneyassessment.herokuapp.com/api/';
 
 const requestU = request(url);
 let token;
 let teamId;
 
 
-describe('run simle test', () => {
+describe('run simple test', () => {
 
     it('create user account api', async () => {
         const res = await requestU.post('auth/create-user-account')
